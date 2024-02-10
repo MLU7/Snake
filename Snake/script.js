@@ -24,7 +24,7 @@ function startGame() {
 }
 
 function drawSnake() {
-  let last = snake[snake.length - 1]; // Added 'let' keyword here
+  let last = snake[snake.length - 1]; 
   locations[last[0]][last[1]].className = "";
 
   let newRow = snake[0][0];
@@ -66,7 +66,7 @@ document.addEventListener("keypress", function (e) {
 function createFruit() {
   let row = Math.floor(Math.random() * 25);
   let column = Math.floor(Math.random() * 25);
-  while (snake.some(segment => segment[0] === row && segment[1] === column)) { // Simplified condition to avoid redeclaration
+  while (snake.some(segment => segment[0] === row && segment[1] === column)) { 
     row = Math.floor(Math.random() * 25);
     column = Math.floor(Math.random() * 25);
   }
@@ -76,9 +76,9 @@ function createFruit() {
 
 function checkEatFruit(row, column) {
   if (fruit === locations[row][column]) {
-    let lastSegment = snake[snake.length - 1]; // Changed variable name to avoid confusion
-    let newRow = lastSegment[0]; // Changed variable name to avoid confusion
-    let newColumn = lastSegment[1]; // Changed variable name to avoid confusion
+    let lastSegment = snake[snake.length - 1]; 
+    let newRow = lastSegment[0]; 
+    let newColumn = lastSegment[1]; 
     snake.push([newRow, newColumn]);
     createFruit();
   }
