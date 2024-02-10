@@ -1,0 +1,13 @@
+#table{
+  border: solid 2px;
+}
+td{
+  width: 5px;
+  height: 5px;
+}
+.snake{
+  background-color: red;
+}
+.fruit{
+  background-color: green;
+}
